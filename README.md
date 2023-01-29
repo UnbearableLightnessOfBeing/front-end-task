@@ -9,12 +9,14 @@ npm install
 ```
 npm run dev
 ```
-### To preview
-```
-npm run preview
-```
 
 ### Compiles and minifies for production
 ```
 npm run build
 ```
+
+### To preview the build locally
+```
+npm run preview
+```
+
