@@ -12,6 +12,10 @@ module.exports = {
         secondaryRed: '#e63000',
         secondaryBrown: '#5A1404',
       },
+
+      fontFamily: {
+        condpro: ['PFDinTextCondPro'],
+      }
     },
   },
   plugins: [],

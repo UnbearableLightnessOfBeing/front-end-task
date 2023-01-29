@@ -2,6 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @font-face {
+  font-family: 'PDFinTextCondPro-Medium';
+  src: url('./assets/fonts/PFDinTextCondPro-Medium.ttf');
+} */
+
+/* @font-face {
+  font-family: 'PFDinTextCondPro';
+  src: url('./assets/fonts/PFDinTextCondPro-Regular.ttf');
+  font-weight: 300;
+} */
+
+@font-face {
+  font-family: 'PFDinTextCondPro';
+  src: url('./assets/fonts/pfdintextcondpro-medium.woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PFDinTextCondPro';
+  src: url('./assets/fonts/pfdintextcondpro-regular.woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: 'PFDinTextCondPro';
+  src: url('./assets/fonts/PFDinTextCondPro-Bold.ttf');
+  font-weight: 500;
+} */
+
 @layer components {
   .primary-button {
     @apply rounded-full bg-primary px-4 py-2 text-secondaryBrown font-[500] uppercase;
