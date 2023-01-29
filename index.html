@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body class="flex flex-col items-center">
+    <header class="mobile-screen text-sky-600 w-full">
+      <div class="header-content flex w-full h-[62px] pl-[15px] pr-[10px] items-center justify-between">
+        <div class="flex gap-4">
+          <div class="menu-toggler w-6">
+            <img alt="hamburger" src="./assets/svgs/hamburger.svg" id="hamburger" class="text-sm font-medium text-black">
+            <img alt="x-mark" src="./assets/svgs/x-mark.svg" id="x-mark" class="hidden text-sm font-medium text-black">
+          </div>
+          <!-- <img alt="company-logo" id="company-logo" class="text-sm font-medium text-black"> -->
+          <img alt="company-logo" src="./assets/svgs//company-logo.svg" id="company-logo" class="text-sm font-medium text-black">
+        </div>
+        <a href="#" class="primary-button py-[5px] px-[22px]">Вход</a>
+      </div>
+      <nav id="mobile-menu" class="menu h-[0] transition-height duration-200 overflow-hidden bg-primary">
+        <ul class="font-[500] space-y-5 mx-[10px] px-[10px] py-[25px] decoration-none uppercase border-b-[1px] 
+            border-[#ECB200] border-solid text-secondaryBrown">
+          <li class="">
+            <a href="#">Правила</a>
+          </li>
+          <li class="#">
+            <a href="#">Призы</a>
+          </li>
+          <li class="">
+            <a href="#">Победители</a>
+          </li>
+        </ul>
+        <ul class="font-[500] space-y-5 mx-[10px] px-[10px] py-[25px] decoration-none border-b-[1px] 
+            border-[#ECB200] border-solid text-secondaryBrown">
+          <li class="text-[14px]">
+            <a href="#">Обратная связь</a>
+          </li>
+          <li class="text-[14px]">
+            <a href="#">Правила акции</a>
+          </li>
+          <li class="text-[14px]">
+            <a href="#">FAQ</a>
+          </li>
+        </ul>
+        <div class="join-us font-[400] text-[14px] space-y-5 mx-[10px] px-[10px] py-[25px] decoration-none border-b-[1px] 
+            border-[#ECB200] border-solid text-secondaryBrown">
+            <p>Присоединяйтесь к нам</p>
+            <div class="links">
+              <a href="#" class="link">
+                <img class="h-fit" src="./assets/svgs/facebook-icon.svg" alt="facebook icon">
+              </a>
+              <a href="#" class="link">
+                <img class="h-fit" src="./assets/svgs/vk-icon.svg" alt="facebook icon">
+              </a>
+              <a href="#" class="link">
+                <img class="h-fit" src="./assets/svgs/linkedin-icon.svg" alt="facebook icon">
+              </a>
+              <a href="#" class="link">
+                <img class="h-fit" src="./assets/svgs/twitter-icon.svg" alt="facebook icon">
+              </a>
+              <a href="#" class="link">
+                <img class="h-fit" src="./assets/svgs/instagram-icon.svg" alt="facebook icon">
+              </a>
+              <a href="#" class="link">
+                <img class="h-fit" src="./assets/svgs/p-icon.svg" alt="facebook icon">
+              </a>
+            </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="w-full overflow-hidden bg-primary">
+      <div class="main-picture relative">
+        <div id="oval-wrapper" class="relative bg-primary w-full h-[calc(110vw)]">
+            <img class="absolute top-[2.5%] left-[1.5%] w-[57%] rotate-[-2.5%] z-20" 
+                  src="./assets/svgs/main-title.svg" alt="main title">
+            <picture class="absolute top-[28%] left-[-26%] z-10 w-[95%]">
+                <source srcset="./static/kitchen.webp" type="image/webp">
+                <img src="./static/kitchen.png" alt="kitchen">
+            </picture>
+            <picture class="absolute top-[28%] right-[-1.5%] z-20 w-[57%] h-[900px]">
+                <source srcset="./static/cheese-main.webp" type="image/webp">
+                <img src="./static/cheese-main.png" alt="cheese">
+            </picture>
+            <picture class="absolute top-[19%] right-[3%] z-30 w-[18%]">
+                <source srcset="./static/main-prize.webp" type="image/webp">
+                <img src="./static/main-prize.png" alt="main prize">
+            </picture>
+            <picture class="absolute top-[5%] right-[17%] z-50 w-[68%]">
+                <source srcset="./static/gnome.webp" type="image/webp">
+                <img src="./static/gnome.png" alt="gnome">
+            </picture>
+        </div>
+        <div class="btn-wrapper w-fit absolute left-[50%] bottom-[23%]">
+          <a href="#" class="ml-[-50%] upload-receip-btn w-fit block bg-secondaryRed text-center text-white
+                        uppercase px-[32px] py-[10px] font-[500] text-[14px] rounded-full border-[6px] 
+                        border-white">
+            <p class="text leading-[21px]">Загрузить чек</p>
+          </a>
+        </div>
+      </div>
+      <div class="guide px-[15px] relative">
+        <h1 id="guide-title" class="mb-8 text-[34px] uppercase font-[500] text-secondaryRed text-center ">
+          Нам 40 лет — вам подарки
+        </h1>
+        <img src="./assets/svgs/baloon.svg" class="absolute top-[115px] left-[27px]" alt="baloon">
+        <img src="./assets/svgs/white-spring.svg" class="absolute top-[140px] right-[50px]" alt="spring">
+        <div class="guide-steps pb-[50px] text-secondaryBrown text-center text-[20px] font-[400] flex flex-col gap-[30px]">
+          <div class="step-card flex flex-col items-center gap-[22px]">
+            <div class="step-content w-fit items-center flex flex-col gap-[22px]">
+              <img src="./assets/svgs/cheese-cart.svg" class="w-fit" alt="cheese cart">
+              <p class="text ">Покупайте сыр<br /> Oltermanni</p>
+            </div> 
+            <img src="./assets/svgs/arrow-down.svg" alt="arrow">
+          </div>
+          <div class="step-card flex flex-col items-center gap-[22px]">
+            <div class="step-content w-fit items-center flex flex-col gap-[22px]">
+              <img src="./assets/svgs/regitster.svg" class="w-fit" alt="register">
+              <p class="text ">
+                Регистрируйте чеки <br /> на сайте в период <br /> 
+                с 1 сентября по 30 ноября <br /> 2020 года
+              </p>
+            </div> 
+            <img src="./assets/svgs/arrow-down.svg" alt="arrow">
+          </div>
+          <div class="step-card flex flex-col items-center gap-[22px]">
+            <div class="step-content w-fit items-center flex flex-col gap-[22px]">
+              <img src="./assets/svgs/receive.svg" class="w-fit" alt="receive">
+              <p class="text ">
+                Получайте гарантированные <br />
+                призы — деньги на телефон
+              </p>
+            </div> 
+            <img src="./assets/svgs/arrow-down.svg" alt="arrow">
+          </div>
+          <div class="step-card flex flex-col items-center gap-[22px]">
+            <div class="step-content w-fit items-center flex flex-col gap-[22px]">
+              <img src="./assets/svgs/participate.svg" class="w-fit" alt="participate">
+              <p class="text ">
+                Участвуйте <br /> в еженедельных розыгрышах
+              </p>
+            </div> 
+            <img src="./assets/svgs/arrow-down.svg" alt="arrow">
+          </div>
+          <div class="step-card flex flex-col items-center gap-[22px]">
+            <div class="step-content w-fit items-center flex flex-col gap-[22px]">
+              <img src="./assets/svgs/win.svg" class="w-fit" alt="win">
+              <p class="text ">
+                Получите возможность <br /> выиграть 400 000 ₽ <br /> 
+                на новый интерьер
+              </p>
+            </div> 
+          </div>
+        </div>
+        <img src="./assets/svgs/brown-spring.svg" class="absolute bottom-[-20px] left-[50px]" alt="spring">
+      </div>
+      <div class="participants bg-white pt-9">
+        <h1 class="text-secondaryBrown text-[30px] font-[500] mb-5 leading-[46px] text-center uppercase">В акции участвуют</h1>
+        <div class="swiper text-secondaryBrown font-[400] px-4 text-center w-full h-fit pb-[52px]">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture class="">
+                  <source srcset="./static/cheese-slide-1.webp" type="image/webp">
+                  <img src="./static/cheese-slide-1.png" class="mx-auto" alt="slide 1">
+              </picture>
+              <p class="caption">
+                Лёгкий, брусок <br /> 180 г
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <picture class="">
+                  <source srcset="./static/cheese-slide-2.webp" type="image/webp">
+                  <img src="./static/cheese-slide-2.png" class="mx-auto" alt="slide 2">
+              <p class="caption">
+                Лёгкий, слайсы <br> 120, 225 г
+              </p>
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture class="">
+                  <source srcset="./static/cheese-slide-3.webp" type="image/webp">
+                  <img src="./static/cheese-slide-3.png" class="mx-auto" alt="slide 3">
+              </picture>
+              <p class="caption">
+                Сливочный, брусок <br> 200, 300 г
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <picture class="">
+                  <source srcset="./static/cheese-slide-4.webp" type="image/webp">
+                  <img src="./static/cheese-slide-4.png" class="mx-auto" alt="slide 4">
+              </picture>
+              <p class="caption">
+                Сливочный, слайсы <br> 130, 250 г
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <picture class="">
+                  <source srcset="./static/cheese-slide-1.webp" type="image/webp">
+                  <img src="./static/cheese-slide-1.png" class="mx-auto" alt="slide 5">
+              </picture>
+              <p class="caption">
+                Лёгкий, брусок <br /> 180 г
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <picture class="">
+                  <source srcset="./static/cheese-slide-1.webp" type="image/webp">
+                  <img src="./static/cheese-slide-1.png" class="mx-auto" alt="slide 5">
+              </picture>
+              <p class="caption">
+                Лёгкий, брусок <br /> 180 г
+              </p>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div id="prizes-oval-wrapper" class="prizes-wrapper bg-[#EDEDED] w-full h-[400px]">
+        <div id="prize-oval-wrapper" class="prizes bg-white w-full h-full"></div>
+      </div>
+    </main>
+    <footer class="bg-white pb-2 flex flex-col gap-[17px] items-center pt-6 text-secondaryBrown">
+      <div class="navigation mb-2 flex gap-[43px] font-[500] text-[14px] leading-[21px]">
+        <a href="#">Обратная связь</a>
+        <a href="#">Правила акции</a>
+        <a href="#">FAQ</a>
+      </div>
+      <div class="info-line text-center">
+        <h2 class="uppercase leading-[18px] font-[500]">Инфомационная линия</h2>
+        <span class="block leading-[40px] font-[500] text-secondaryRed text-[30px]">8 800 333-15-25</span>
+      </div>
+      <div class="media-links text-center flex flex-col gap-[11px]">
+        <p>Присоединяйтесь к нам</p>
+          <div class="links">
+            <a href="#" class="link bg-primary">
+              <img class="h-fit" src="./assets/svgs/facebook-icon.svg" alt="facebook icon">
+            </a>
+            <a href="#" class="link bg-primary">
+              <img class="h-fit" src="./assets/svgs/vk-icon.svg" alt="facebook icon">
+            </a>
+            <a href="#" class="link bg-primary">
+              <img class="h-fit" src="./assets/svgs/linkedin-icon.svg" alt="facebook icon">
+            </a>
+            <a href="#" class="link bg-primary">
+              <img class="h-fit" src="./assets/svgs/twitter-icon.svg" alt="facebook icon">
+            </a>
+            <a href="#" class="link bg-primary">
+              <img class="h-fit" src="./assets/svgs/instagram-icon.svg" alt="facebook icon">
+            </a>
+            <a href="#" class="link bg-primary">
+              <img class="h-fit" src="./assets/svgs/p-icon.svg" alt="facebook icon">
+            </a>
+          </div>
+          <p class="copyright text-[10px] font-[400] leading-[21px]">
+            © 2020 ООО «Валио»
+          </p>
+      </div>
+
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

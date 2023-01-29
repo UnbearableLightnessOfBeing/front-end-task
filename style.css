@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .primary-button {
+    @apply rounded-full bg-primary px-4 py-2 text-secondaryBrown font-[500] uppercase;
+  }
+
+  .caption {
+    @apply mt-[22px];
+  }
+
+  .links {
+    @apply flex gap-[10px];
+  }
+
+  .link {
+    @apply flex justify-center items-center w-8 h-8 rounded-[5px] bg-[#ECB200];
+  }
+
+}
