@@ -27,12 +27,6 @@
   font-style: normal;
 }
 
-/* @font-face {
-  font-family: 'PFDinTextCondPro';
-  src: url('./assets/fonts/PFDinTextCondPro-Bold.ttf');
-  font-weight: 500;
-} */
-
 @layer components {
   .primary-button {
     @apply rounded-full bg-primary px-4 py-2 text-secondaryBrown font-[500] uppercase;
@@ -48,6 +42,18 @@
 
   .link {
     @apply flex justify-center items-center w-8 h-8 rounded-[5px] bg-[#ECB200];
+  }
+
+  .step-card {
+    @apply flex flex-col items-center gap-[22px] lg:w-fit lg:flex-row;
+  }
+
+  .step-content {
+    @apply  w-fit items-center flex flex-col gap-[22px] lg:self-start;
+  }
+
+  .arrow {
+    @apply lg:rotate-[-90deg];
   }
 
 }

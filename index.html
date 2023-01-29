@@ -4,20 +4,37 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Oltermanni</title>
   </head>
   <body class="flex flex-col items-center font-condpro">
-    <header class="mobile-screen text-sky-600 w-full">
-      <div class="header-content flex w-full h-[62px] pl-[15px] pr-[10px] items-center justify-between">
+    <header class="mobile-screen text-sky-600 w-full xl:px-[135px]">
+      <div class="header-content flex w-full h-[62px] xl:h-[82px] pl-[15px] pr-[10px] items-center justify-between">
         <div class="flex gap-4">
-          <div class="menu-toggler w-6">
+          <div class="menu-toggler md:hover:cursor-pointer w-6 xl:hidden">
             <img alt="hamburger" src="./assets/svgs/hamburger.svg" id="hamburger" class="text-sm font-medium text-black">
             <img alt="x-mark" src="./assets/svgs/x-mark.svg" id="x-mark" class="hidden text-sm font-medium text-black">
           </div>
           <!-- <img alt="company-logo" id="company-logo" class="text-sm font-medium text-black"> -->
-          <img alt="company-logo" src="./assets/svgs//company-logo.svg" id="company-logo" class="text-sm font-medium text-black">
+          <img alt="company-logo" src="./assets/svgs//company-logo.svg" id="company-logo" class="md:w-[176px] font-medium">
         </div>
-        <a href="#" class="primary-button py-[5px] px-[22px]">Вход</a>
+        <nav>
+          <ul class="font-[500] hidden xl:flex gap-20 mx-[10px] px-[10px] py-[25px] decoration-none uppercase 
+                    border-solid text-secondaryBrown">
+            <li class="">
+              <a href="#" class="hover:text-secondaryRed">Правила</a>
+            </li>
+            <li class="">
+              <a href="#" class="hover:text-secondaryRed">Призы</a>
+            </li>
+            <li class="">
+              <a href="#" class="hover:text-secondaryRed">Победители</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="flex gap-[17px] items-center">
+          <a href="#" class="primary-button hover:bg-primary-hover py-[5px] px-[22px] md:px-[42px] md:py-[10px]">Вход</a>
+          <a href="#" class="hidden font-[500] text-secondaryBrown uppercase xl:block hover:text-secondaryRed">Регистрация</a>
+        </div>
       </div>
       <nav id="mobile-menu" class="menu h-[0] transition-height duration-200 overflow-hidden bg-primary">
         <ul class="font-[500] space-y-5 mx-[10px] px-[10px] py-[25px] decoration-none uppercase border-b-[1px] 
@@ -71,51 +88,60 @@
       </nav>
     </header>
 
-    <main class="w-full overflow-hidden bg-primary">
+    <main class="w-full overflow-hidden bg-primary lg:bg-gradient-to-t from-primary to-primary-hover">
       <div class="main-picture relative">
-        <div id="oval-wrapper" class="relative bg-primary w-full h-[calc(110vw)]">
-            <img class="absolute top-[2.5%] left-[1.5%] w-[57%] rotate-[-2.5%] z-20" 
-                  src="./assets/svgs/main-title.svg" alt="main title">
-            <picture class="absolute top-[28%] left-[-26%] z-10 w-[95%]">
-                <source srcset="./static/kitchen.webp" type="image/webp">
-                <img src="./static/kitchen.png" alt="kitchen">
-            </picture>
-            <picture class="absolute top-[28%] right-[-1.5%] z-20 w-[57%] h-[900px]">
-                <source srcset="./static/cheese-main.webp" type="image/webp">
-                <img src="./static/cheese-main.png" alt="cheese">
-            </picture>
-            <picture class="absolute top-[19%] right-[3%] z-30 w-[18%]">
-                <source srcset="./static/main-prize.webp" type="image/webp">
-                <img src="./static/main-prize.png" alt="main prize">
-            </picture>
-            <picture class="absolute top-[5%] right-[17%] z-50 w-[68%]">
-                <source srcset="./static/gnome.webp" type="image/webp">
-                <img src="./static/gnome.png" alt="gnome">
-            </picture>
+        <div id="outer-oval-wrapper" class="lg:bg-primary ">
+          <div id="oval-wrapper" class="relative bg-primary w-full h-[calc(110vw)] md:h-[77vw] lg:max-h-[770px] desktop:max-h-[800px]">
+              <img class="absolute top-[2.5%] left-[1.5%] w-[57%] rotate-[-2.5%] z-20 lg:max-w-[558px] lg:left-[5%] xl:left-[12%]" 
+                    src="./assets/svgs/main-title.svg" alt="main title">
+              <picture class="absolute top-[28%] left-[-26%] z-10 w-[95%] md:top-[45%] md:w-[77%] md:left-[-15%]
+                        lg:max-w-[891px] lg:top-[42%] lg:left-[-10%] xl:w-[100%] xl:left-0 xl:top-[34%]">
+                  <source srcset="./static/kitchen.webp" type="image/webp">
+                  <img src="./static/kitchen.png" alt="kitchen">
+              </picture>
+              <picture class="absolute top-[28%] right-[-1.5%] z-20 w-[57%] md:top-[35%] lg:max-w-[622px] lg:top-[29%] xl:left-[50%]
+                              xl:top-[25%]  desktop:top-[23%]">
+                  <source srcset="./static/cheese-main.webp" type="image/webp">
+                  <img src="./static/cheese-main.png" alt="cheese">
+              </picture>
+              <picture class="absolute top-[19%] right-[3%] z-30 w-[18%] md:top-[25%] lg:max-w-[177px] lg:top-[21%] xl:top-[16%]
+                          xl:left-[80%] desktop:left-[79%] desktop:top-[14%]">
+                  <source srcset="./static/main-prize.webp" type="image/webp">
+                  <img src="./static/main-prize.png" alt="main prize">
+              </picture>
+              <picture class="absolute top-[5%] right-[17%] z-50 w-[68%] lg:max-w-[558px] lg:left-[22%] lg:top-[11%]
+                              xl:left-[26%]">
+                  <source srcset="./static/gnome.webp" type="image/webp">
+                  <img src="./static/gnome.png" alt="gnome">
+              </picture>
+          </div>
         </div>
-        <div class="btn-wrapper w-fit absolute left-[50%] bottom-[23%]">
-          <a href="#" class="ml-[-50%] upload-receip-btn w-fit block bg-secondaryRed text-center text-white
-                        uppercase px-[32px] py-[7px] font-[500] text-[14px] rounded-full border-[6px] 
-                        border-white">
-            <p class="text leading-[21px]">Загрузить чек</p>
+        <div class="btn-wrapper w-fit absolute left-[50%] bottom-[30vw] sm:bottom-[33vw] md:bottom-[3vw]">
+          <a href="#" class="ml-[-50%] upload-receip-btn w-fit block bg-secondaryRed hover:bg-secondary-hover text-center text-white
+                        uppercase px-[32px] py-[7px] font-[500] text-[14px] rounded-full border-[6px] transition-all duration-200 
+                        border-white md:px-[60px] md:py-[15px] md:border-[9px] drop-shadow-btn hover:drop-shadow-btn-hover">
+            <p class="text-[14px] md:text-[16px] leading-[21px]">Загрузить чек</p>
           </a>
         </div>
       </div>
       <div class="guide px-[15px] relative">
-        <h1 id="guide-title" class="mb-8 text-[34px] uppercase font-[500] text-secondaryRed text-center ">
+        <h1 id="guide-title" class="mb-[60px] text-[34px] uppercase font-[500] text-secondaryRed text-center md:text-[60px] md:mt-[75px]">
           Нам 40 лет — вам подарки
         </h1>
-        <img src="./assets/svgs/baloon.svg" class="absolute top-[115px] left-[27px]" alt="baloon">
-        <img src="./assets/svgs/white-spring.svg" class="absolute top-[140px] right-[50px]" alt="spring">
-        <div class="guide-steps pb-[50px] text-secondaryBrown text-center text-[20px] font-[400] flex flex-col gap-[30px]">
-          <div class="step-card flex flex-col items-center gap-[22px]">
-            <div class="step-content w-fit items-center flex flex-col gap-[22px]">
+        <img class="absolute top-[115px] left-[27px] lg:w-[80px] lg:top-[-37px] lg:left-[57px]" 
+              src="./assets/svgs/baloon.svg" alt="baloon">
+        <img class="absolute top-[140px] right-[50px] lg:w-[31px] lg:top-[-25px] lg:right-[74px]" 
+              src="./assets/svgs/white-spring.svg" alt="spring">
+        <div class="guide-steps pb-[50px] text-secondaryBrown text-center text-[20px] font-[400] flex flex-col gap-[30px]
+                    lg:flex-row lg:gap-[30px] lg:flex-wrap lg:justify-center">
+          <div class="step-card">
+            <div class="step-content">
               <img src="./assets/svgs/cheese-cart.svg" class="w-fit" alt="cheese cart">
               <p class="text ">Покупайте сыр<br /> Oltermanni</p>
             </div> 
-            <img src="./assets/svgs/arrow-down.svg" alt="arrow">
+            <img src="./assets/svgs/arrow-down.svg" class="arrow" alt="arrow">
           </div>
-          <div class="step-card flex flex-col items-center gap-[22px]">
+          <div class="step-card">
             <div class="step-content w-fit items-center flex flex-col gap-[22px]">
               <img src="./assets/svgs/regitster.svg" class="w-fit" alt="register">
               <p class="text ">
@@ -123,28 +149,28 @@
                 с 1 сентября по 30 ноября <br /> 2020 года
               </p>
             </div> 
-            <img src="./assets/svgs/arrow-down.svg" alt="arrow">
+            <img src="./assets/svgs/arrow-down.svg" class="arrow" alt="arrow">
           </div>
-          <div class="step-card flex flex-col items-center gap-[22px]">
+          <div class="step-card">
             <div class="step-content w-fit items-center flex flex-col gap-[22px]">
               <img src="./assets/svgs/receive.svg" class="w-fit" alt="receive">
-              <p class="text ">
+              <p class="text desktop:w-[198px]">
                 Получайте гарантированные <br />
                 призы — деньги на телефон
               </p>
             </div> 
-            <img src="./assets/svgs/arrow-down.svg" alt="arrow">
+            <img src="./assets/svgs/arrow-down.svg" class="arrow" alt="arrow">
           </div>
-          <div class="step-card flex flex-col items-center gap-[22px]">
+          <div class="step-card">
             <div class="step-content w-fit items-center flex flex-col gap-[22px]">
               <img src="./assets/svgs/participate.svg" class="w-fit" alt="participate">
-              <p class="text ">
+              <p class="text desktop:w-[142px]">
                 Участвуйте <br /> в еженедельных розыгрышах
               </p>
             </div> 
-            <img src="./assets/svgs/arrow-down.svg" alt="arrow">
+            <img src="./assets/svgs/arrow-down.svg" class="arrow" alt="arrow">
           </div>
-          <div class="step-card flex flex-col items-center gap-[22px]">
+          <div class="step-card">
             <div class="step-content w-fit items-center flex flex-col gap-[22px]">
               <img src="./assets/svgs/win.svg" class="w-fit" alt="win">
               <p class="text ">
@@ -154,11 +180,14 @@
             </div> 
           </div>
         </div>
-        <img src="./assets/svgs/brown-spring.svg" class="absolute bottom-[-20px] left-[50px]" alt="spring">
+        <img src="./assets/svgs/brown-spring.svg" class="absolute bottom-[-20px] left-[50px] lg:left-[200px]" alt="spring">
       </div>
-      <div class="participants bg-white pt-9">
-        <h1 class="text-secondaryBrown text-[30px] font-[500] mb-5 leading-[46px] text-center uppercase">В акции участвуют</h1>
-        <div class="swiper text-secondaryBrown font-[400] px-4 text-center w-full h-fit pb-[52px]">
+      <div class="participants bg-white pt-9 xl:pt-[66px]">
+        <h1 class="text-secondaryBrown text-[30px] font-[500] mb-5 xl:mb-[23px] leading-[46px] text-center uppercase
+                  md:text-[36px]">
+          В акции участвуют
+        </h1>
+        <div class="swiper text-secondaryBrown font-[400] px-4 lg:px-10 text-center w-full xl:w-[1170px] h-fit pb-[52px]">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <picture class="">
@@ -216,48 +245,66 @@
             </div>
           </div>
           <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev">
+            <svg width="20" height="29" viewBox="0 0 20 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7231 25.59L7.51653 14.5415L19.7231 3.49296L16.0081 0.130371L0.0864164 14.5415L16.0081 28.9525L19.7231 25.59Z" fill="#5A1404"/>
+            </svg>
+          </div>
+          <div class="swiper-button-next">
+            <svg width="20" height="29" viewBox="0 0 20 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.277343 25.59L12.484 14.5415L0.277344 3.49296L3.9924 0.130371L19.9141 14.5415L3.9924 28.9525L0.277343 25.59Z" fill="#5A1404"/>
+            </svg>
+          </div>
         </div>
       </div>
-      <div id="prizes-oval-wrapper" class="prizes-wrapper bg-[#EDEDED] w-full h-[100vw]">
+      <div id="prizes-oval-wrapper" class="prizes-wrapper bg-[#EDEDED] w-full h-[100vw] md:h-[55vw]">
         <div id="prize-oval-wrapper" class="prizes bg-white w-full h-full"></div>
       </div>
     </main>
-    <footer class="bg-white pb-2 flex flex-col gap-[17px] items-center pt-6 text-secondaryBrown">
-      <div class="navigation mb-2 flex gap-[43px] font-[500] text-[14px] leading-[21px]">
-        <a href="#">Обратная связь</a>
-        <a href="#">Правила акции</a>
-        <a href="#">FAQ</a>
+    <footer class="w-full xl:px-[135px]">
+      <div class="bg-white pb-2 flex flex-col gap-[17px] px-6 items-center pt-6 text-secondaryBrown
+              lg:flex-row lg:justify-between lg:flex-wrap lg:w-full">
+        <div class="navigation order-1 lg:order-2 lg:self-start lg:mt-3 mb-2 flex gap-[43px] font-[500] 
+              text-[14px] leading-[21px] md:text-[16px]">
+          <a href="#">Обратная связь</a>
+          <a href="#">Правила акции</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div class="info-line order-2 lg:order-1 text-center lg:text-start">
+          <h2 class="uppercase leading-[18px] text-[14px] font-[500] md:text-[20px] md:leading-[47px]">Инфомационная линия</h2>
+          <span class="block leading-[40px] font-[500] text-secondaryRed text-[30px] md:text-[36px] md:leading-[48px]">8 800 333-15-25</span>
+        </div>
+        <div class="media-links order-3 text-center font-[400] flex flex-col gap-[11px] lg:self-start 
+                lg:mt-3 lg:text-start">
+          <p class="text-[14px] md:text-[16px]">Присоединяйтесь к нам</p>
+            <div class="links">
+              <a href="#" class="link order-1 bg-primary">
+                <img class="h-fit" src="./assets/svgs/facebook-icon.svg" alt="facebook icon">
+              </a>
+              <a href="#" class="link order-2 bg-primary">
+                <img class="h-fit" src="./assets/svgs/vk-icon.svg" alt="facebook icon">
+              </a>
+              <a href="#" class="link order-3 bg-primary">
+                <img class="h-fit" src="./assets/svgs/linkedin-icon.svg" alt="facebook icon">
+              </a>
+              <a href="#" class="link order-4 bg-primary">
+                <img class="h-fit" src="./assets/svgs/twitter-icon.svg" alt="facebook icon">
+              </a>
+              <a href="#" class="link order-5 bg-primary">
+                <img class="h-fit" src="./assets/svgs/instagram-icon.svg" alt="facebook icon">
+              </a>
+              <a href="#" class="link order-6 bg-primary">
+                <img class="h-fit" src="./assets/svgs/p-icon.svg" alt="facebook icon">
+              </a>
+            </div>
+        </div>
       </div>
-      <div class="info-line text-center">
-        <h2 class="uppercase leading-[18px] text-[14px] font-[500]">Инфомационная линия</h2>
-        <span class="block leading-[40px] font-[500] text-secondaryRed text-[30px]">8 800 333-15-25</span>
-      </div>
-      <div class="media-links text-center font-[400] flex flex-col gap-[11px]">
-        <p class="text-[14px]">Присоединяйтесь к нам</p>
-          <div class="links">
-            <a href="#" class="link bg-primary">
-              <img class="h-fit" src="./assets/svgs/facebook-icon.svg" alt="facebook icon">
-            </a>
-            <a href="#" class="link bg-primary">
-              <img class="h-fit" src="./assets/svgs/vk-icon.svg" alt="facebook icon">
-            </a>
-            <a href="#" class="link bg-primary">
-              <img class="h-fit" src="./assets/svgs/linkedin-icon.svg" alt="facebook icon">
-            </a>
-            <a href="#" class="link bg-primary">
-              <img class="h-fit" src="./assets/svgs/twitter-icon.svg" alt="facebook icon">
-            </a>
-            <a href="#" class="link bg-primary">
-              <img class="h-fit" src="./assets/svgs/instagram-icon.svg" alt="facebook icon">
-            </a>
-            <a href="#" class="link bg-primary">
-              <img class="h-fit" src="./assets/svgs/p-icon.svg" alt="facebook icon">
-            </a>
-          </div>
-          <p class="copyright text-[10px] font-[400] leading-[21px]">
-            © 2020 ООО «Валио»
-          </p>
-      </div>
+      <p class="copyright order-4 text-center text-[10px] font-[400] leading-[21px] md:text-[12px]
+            lg:text-start lg:pl-6">
+        © 2020 ООО «Валио»
+      </p>
 
     </footer>
 

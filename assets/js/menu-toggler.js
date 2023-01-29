@@ -1,6 +1,4 @@
 
-// document.querySelector('#app').innerHTML = ``;
-// document.getElementById('js-logo').src = jsLogo;
 const hamburgerEl = document.getElementById('hamburger')
 
 const xMarkEl = document.getElementById('x-mark')
